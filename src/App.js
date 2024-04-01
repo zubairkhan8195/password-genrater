@@ -1,4 +1,4 @@
-import PassswordGenrater from "./components/passswordGenrater";
+import PassswordGenrater from "./components/passswordGenerater";
 import ToggleBtn from "./components/toggleBtn";
 
 function App() {
