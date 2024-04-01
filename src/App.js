@@ -1,7 +1,11 @@
+import PassswordGenrater from "./components/passswordGenrater";
+import ToggleBtn from "./components/toggleBtn";
+
 function App() {
   return (
     <div>
-      <h1>khan</h1>
+      <PassswordGenrater />
+      {/* <ToggleBtn /> */}
     </div>
   );
 }
