@@ -13,3 +13,28 @@
 body {
   font-family: "Quicksand";
 }
+
+.range-label {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  background: #fff;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.range-label::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #005679;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 4px solid #eee;
+  box-shadow: -410px 0 0 400px #005679;
+}
+
+input[type="checkbox"] {
+  accent-color: #005679;
+  mix-blend-mode: multiply;
+}

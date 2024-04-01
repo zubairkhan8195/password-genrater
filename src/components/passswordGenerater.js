@@ -2,7 +2,7 @@ import { toBeChecked } from "@testing-library/jest-dom/matchers";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 
 export default function PassswordGenrater() {
-  const [length, setLength] = useState(6);
+  const [length, setLength] = useState(30);
   const [numberAllowed, setNumberAllowed] = useState(true);
   const [smallCharAllowed, setSmallCharAllowed] = useState(true);
   const [specialCharAllowed, setSpecialCharAllowed] = useState(false);
@@ -84,7 +84,7 @@ export default function PassswordGenrater() {
 
   return (
     <div className="flex items-center justify-center h-screen bg-bgPassword bg-cover bg-no-repeat">
-      <div className="w-[600px] text-[#313137]  bg-white/40 backdrop-blur-lg rounded-xl px-12 pt-14 shadow-[0_25px_15px_rgba(0,0,0,0.25),0_25px_20px_rgba(0,0,0,0.1)]">
+      <div className=" w-[450px] md:w-[600px] text-[#313137]  bg-white/40 backdrop-blur-lg rounded-xl px-12 pt-14 shadow-[0_25px_15px_rgba(0,0,0,0.25),0_25px_20px_rgba(0,0,0,0.1)]">
         {/* heading */}
         <div>
           <h1 className="text-4xl font-semibold">Passsword Generater</h1>
@@ -99,17 +99,17 @@ export default function PassswordGenrater() {
           </div>
           <input
             type="range"
-            defaultValue={6}
+            Value={30}
             min={6}
-            max={20}
+            max={100}
             onChange={(e) => setLength(e.target.value)}
-            className="cursor-pointer"
+            className="cursor-pointer range-label"
           />
         </div>
         {/*checkbox input */}
         {inputArray.map(
           ({ id, onChangerFn, labelText, spanText, defaultvalue }, index) => (
-            <div key={index} className="flex items-center gap-x-2 mt-4">
+            <div key={index} className="flex items-center gap-x-2 mt-6">
               <input
                 type="checkbox"
                 id={id}
@@ -129,14 +129,14 @@ export default function PassswordGenrater() {
           <button
             onClick={passwordGenrater}
             // onClick={copyPasswordToClipboard}
-            className="text-white text-lg bg-blue-700 outline-none  rounded-md font-bold py-2 mt-4"
+            className="text-white text-lg bg-[#005679] outline-none  rounded-md font-bold py-2 mt-4"
           >
             Generate
           </button>
           <input
             type="text"
             className="outline-none text-lg text-center rounded-md font-semibold py-5 mt-3 mb-6"
-            placeholder="Password"
+            placeholder="Click on generate button."
             value={password}
             readOnly
             // ref={passwordRef}
